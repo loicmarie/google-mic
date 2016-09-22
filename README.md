@@ -36,3 +36,6 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+=======
+# google-mic
+A polymer element that allows to record audio and send it to the Google Speech  API
