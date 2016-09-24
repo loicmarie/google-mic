@@ -8,6 +8,7 @@
 
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-input/paper-input.html">
 
     <link rel="import" href="../google-mic.html">
 
@@ -20,7 +21,18 @@
       <h3>Basic google-mic Demo</h3>
       <demo-snippet>
         <template>
-          <google-mic></google-mic>
+          <paper-input id="speech-input"></paper-input>
+          <google-mic id="speech-mic"></google-mic>
+          <script>
+
+            var speechInput = document.querySelector('#speech-input');
+            var speechMic = document.querySelector('#speech-mic');
+
+            speechMic.addEventListener('speech-mic-result', function(e) {
+              speechInput.value = e.detail.transcript;
+            });
+
+          </script>
         </template>
       </demo-snippet>
     </div>
